@@ -1,6 +1,8 @@
 import pyspark
-sc = pyspark.SparkContext('local[*]')
+sc = pyspark.SparkContext("test").appName("cpts415-bigdata")
 
+
+  
 txt = sc.textFile('file:////usr/share/doc/python/copyright')
 print(txt.count())
 
